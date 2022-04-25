@@ -1,0 +1,40 @@
+.menu-button {
+    position: relative;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.menu-button__open{
+    opacity: 1;
+    transform: scale(1) rotate(0) translateY(0);
+    transform-origin: center;
+    transition: opacity var(--animation);
+}
+
+.menu-button.is-active .menu-button__open {
+    opacity: 0;
+    transform: scale(0.3) rotate(90deg) translateY(100%);
+}
+
+.menu-button__close{
+    opacity: 0;
+    transform-origin: center;
+    transition: opacity var(--animation), transform var(--animation) ;
+}
+
+.menu-button.is-active .menu-button__close {
+    opacity: 1;
+
+}
+
+
+

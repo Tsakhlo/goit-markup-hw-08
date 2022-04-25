@@ -1,5 +1,6 @@
 .navi__list {
-    display: flex;
+    display: none;
+    
     align-items: center;
     & .is-active {
         color: var(--accent-color);
