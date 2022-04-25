@@ -1,0 +1,40 @@
+.icons-box {
+    margin-left: 70px;
+}
+
+.footer-icons-title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--primery-white-color);
+    font-weight: 700;
+}
+
+.footer-icons-list {
+    display: flex;
+    column-gap: 10px;
+}
+
+.footer-item {
+    width: 44px;
+    height: 44px;
+}
+
+.footer-icon-link {
+    border-radius: 50%;
+    display: flex;
+    background-color: var(--icons-footer);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    transition: background-color var(--animation);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}
+
+.footer-icon {
+    fill: var(--primery-white-color);
+}

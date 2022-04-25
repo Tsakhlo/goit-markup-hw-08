@@ -1,0 +1,25 @@
+@import "./reset";
+
+body {
+
+    font-family: var(--main-font);
+    color: var(--primery-title-color);
+    background-color: var(--primery-white-color);
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+

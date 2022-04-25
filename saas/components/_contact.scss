@@ -1,0 +1,28 @@
+.contact {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    & &__item+&__item {
+        margin-left: 50px;
+    }
+}
+
+
+
+.contact__link {
+    display: flex;
+    color: var(--primery-text-color);
+    align-items: center;
+    transition: color var(--animation);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.contact__icon-envelope {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+

@@ -1,0 +1,41 @@
+
+.hang-list {
+    display: flex;
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        margin-bottom: 30px;
+    
+        background-color: var(--primery-team-color);
+        border-radius: 4px;
+    }
+    &__item {
+        width: 270px;
+    }
+    &__subtitle {
+        margin-bottom: 10x;
+    
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+    }
+    &__text {
+        margin-top: 10px;
+    
+        color: var(--primery-text-color);
+        line-height: 1.71;
+    }
+    & &__item+&__item {
+        margin-left: 30px;
+        width: 270px;
+    }
+}
+
+
+
+
+
+

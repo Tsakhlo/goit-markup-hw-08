@@ -1,0 +1,36 @@
+.clients-title {
+    margin-bottom: 50px;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+}
+
+.clients-icon-list {
+    display: flex;
+    column-gap: 30px;
+}
+
+.client-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--icons-gray);
+    border-radius: 4px;
+    fill: var(--icons-gray);
+    transition: fill var(--animation), border var(--animation);
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+        fill: var(--accent-color);
+    }
+}
+
+.item {
+    width: 170px;
+    height: 92px;
+}
