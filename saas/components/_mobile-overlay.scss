@@ -41,6 +41,11 @@
 
 .mobile-menu__link {
     color: var(--primery-title-color);
+    transition: color var(--animation);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .mobile-menu-group{
@@ -53,6 +58,10 @@
 
 .mobile-menu__contact-link {
     color: var(--primery-text-color);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .mobile-menu__contact-item:first-child{
@@ -76,9 +85,6 @@
     line-height: 1.17;
     letter-spacing: 0.02em;
 }
-
-
-
 
 .social-list {
     display: flex;
