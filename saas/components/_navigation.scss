@@ -21,6 +21,14 @@
     }
 }
 
+@media screen and (min-width:768px) {
+    .navi__list {
+        display: flex;
+    }
+    
+    
+}
+
 .navi__links {
     display: flex;
     .navi__list &+& {

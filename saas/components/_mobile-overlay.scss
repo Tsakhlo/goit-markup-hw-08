@@ -63,11 +63,17 @@
     letter-spacing: 0.02em;
 }
 
+@media screen and (min-width: 480px) {
+    .mobile-menu__contact-item:first-child {
+        font-size: 34px;
+    }
+}
+
 
 .mobile-menu__contact-item:last-child{
     font-weight: 500;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
 }
 
@@ -87,8 +93,19 @@
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
+
+    margin-right: 10px;
+    margin-top: 10px;
 }
 
 .social-list__link {
     color: var(--accent-color);
+    display: block;
+    padding-right: 10px;
+    border-right: 1px solid var(--accent-color);
+}
+
+.social-list__link:last-child .social-list__link {
+    padding: 0;
+    border: none;
 }
