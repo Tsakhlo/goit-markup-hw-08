@@ -1,5 +1,7 @@
 .icons-box {
-    margin-left: 70px;
+    @media screen and (min-width: 1200px) {
+        margin-left: 70px;
+    }
 }
 
 .footer-icons-title {
@@ -7,6 +9,10 @@
     text-transform: uppercase;
     color: var(--primery-white-color);
     font-weight: 700;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
 }
 
 .footer-icons-list {
@@ -23,6 +29,7 @@
     border-radius: 50%;
     display: flex;
     background-color: var(--icons-footer);
+    
     align-items: center;
     justify-content: center;
     width: 100%;

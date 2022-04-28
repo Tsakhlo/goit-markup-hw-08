@@ -4,7 +4,27 @@
     padding-bottom: 60px;
     &-container {
         display: flex;
-        align-items: baseline;
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+        
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-left: 76px;
+            padding-right: 89px;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+            
+        @media screen and (min-width: 1200px) {
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            
+            padding-left: 15px;
+            padding-right: 15px;
+            gap: 0px;
+        }
     }
 }
 
