@@ -86,12 +86,6 @@ img {
   padding: 0 15px;
 }
 
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
@@ -270,16 +264,20 @@ img {
   margin-left: auto;
   width: 40px;
   height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 2;
+}
+
+.menu-button__icons {
+  display: block;
 }
 
 .menu-button__open {
+  position: relative;
   opacity: 1;
   transform: scale(1) rotate(0) translateY(0);
   transform-origin: center;
@@ -296,6 +294,9 @@ img {
 }
 
 .menu-button__close {
+  position: fixed;
+  top: 10px;
+  right: 15px;
   opacity: 0;
   transform-origin: center;
   transition: opacity var(--animation), transform var(--animation);
@@ -447,10 +448,40 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--primery-background-color);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-image.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/background-image480_x1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/background-image480_x2.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/background-image768_x1.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/background-image768_x2.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/background-image1600_x1.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/background-image1600_x2.jpg);
+  }
 }
 
 .hero__title {
@@ -732,7 +763,6 @@ img {
 }
 
 .hang-list__container {
-  max-width: 480px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -759,7 +789,6 @@ img {
 
 .hang-list__item:not(:last-child) {
   margin-bottom: 30px;
-  max-width: 480px;
 }
 
 @media screen and (min-width: 768px) {
@@ -994,12 +1023,15 @@ img {
 /*portfolio-btn*/
 .page-list {
   display: flex;
-  justify-content: center;
   margin-bottom: 50px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
-.page-list .page-filters-item + .page-filters-item {
-  margin-left: 8px;
+@media screen and (min-width: 768px) {
+  .page-list {
+    justify-content: center;
+  }
 }
 
 .page-filters-btn {
@@ -1026,18 +1058,20 @@ img {
 .pages {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  flex-direction: row;
 }
 
-.pages .page-list-item:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-
-.pages .page-list-item:not(:nth-child(n + 7)) {
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .pages {
+    justify-content: flex-start;
+  }
 }
 
 .card-container {
   padding: 20px 24px;
+  height: 146px;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -1076,6 +1110,18 @@ img {
 .page-item-link:focus .overlay {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) {
+  .page-item-link {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-item-link {
+    width: 370px;
+  }
 }
 
 .page-overlay {

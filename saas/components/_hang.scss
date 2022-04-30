@@ -3,7 +3,6 @@
 }
 .hang-list {
     &__container {
-        max-width: 480px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -31,7 +30,6 @@
     }
     &__item:not(:last-child) {
         margin-bottom: 30px;
-        max-width: 480px;
     }
 }
 
