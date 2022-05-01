@@ -9,6 +9,9 @@
         text-align: center;
     }
 }
+.team-container {
+    max-width: 480px;
+}
 
 
 .team-list{
@@ -52,6 +55,9 @@
 }
 
 @media screen and(min-width:768px) {
+    .team-container {
+        max-width: none;
+    }
     .team-list {
     display: flex;
     flex-wrap: wrap;

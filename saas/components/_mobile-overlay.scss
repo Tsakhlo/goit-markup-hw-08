@@ -1,4 +1,5 @@
 .mobile-menu {
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
@@ -17,8 +18,10 @@
     transition: transform var(--animation);
 }
 .mobile-menu.is-open {
+    position: fixed;
     opacity: 1;
     transform: translateX(0);
+    
 }
 @keyframes menu {
     0% {
@@ -46,9 +49,9 @@
     &:focus {
         color: var(--accent-color);
     }
-    & .is-active {
-        color: var(--accent-color);
-    }
+}
+.mobile-menu__nav .is-active {
+    color: var(--accent-color);
 }
 
 .mobile-menu-group{
@@ -108,7 +111,7 @@
         color: var(--accent-color);
         display: block;
         padding-right: 10px;
-        border-right: 1px solid var(--accent-color);
+        border-right: 1px solid var(--primery-text-color);
     }
     &__link:last-child &__link {
         padding: 0;

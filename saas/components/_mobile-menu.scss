@@ -31,13 +31,9 @@
 .menu-button.is-active .menu-button__open {
     opacity: 0;
     transform: scale(0.3) rotate(90deg) translateY(100%);
+    z-index: 1;
 }
-
 .menu-button__close{
-                position: fixed;
-                top: 10px;
-                right: 15px;
-                
     opacity: 0;
     transform-origin: center;
     transition: opacity var(--animation), transform var(--animation) ;
@@ -47,8 +43,13 @@
     }
 }
 
+.menu-button.is-active .menu-button__icons {
+    position: fixed;
+    top: 10px;
+}
 .menu-button.is-active .menu-button__close {
     opacity: 1;
+    z-index: 3;
 }
 
 @media screen and (min-width: 768px) {
