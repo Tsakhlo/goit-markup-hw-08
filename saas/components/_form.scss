@@ -130,11 +130,20 @@
         letter-spacing: 0.03em;
         @media screen and (min-width:1200px) {
         font-size: 14px;
+        line-height: 1.72;
         }
     }
     &__link {
+        margin-left: 3px;
+        line-height: 1.17;
+        font-size: 12px;
+        letter-spacing: 0.03em;
         text-decoration: underline;
         color: var(--accent-color);
+        @media screen and (min-width:1200px) {
+            font-size: 14px;
+            line-height: 1.72;
+        }
     }
     &__modal:checked+&__span {
         background-color: var(--accent-color);
